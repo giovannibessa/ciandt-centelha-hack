@@ -6,7 +6,46 @@ This codebase was created to demonstrate a fully fledged fullstack application b
 
 We've gone to great lengths to adhere to the [KVision](https://kvision.io) community styleguides & best practices.
 
-# How it works
+# Features
+**Conduit** is a social blogging site (i.e. a Medium.com clone). It uses a custom API for all requests, including authentication.
+
+- Authenticate users via JWT (login/signup pages + logout button on settings page)
+- CRU- users (sign up & settings page - no deleting required)
+- CRUD Articles
+- CR-D Comments on articles (no updating required)
+- GET and display paginated lists of articles
+- Favorite articles
+- Follow other users
+
+## Requirements
+### Header
+#### Unauthenticated user
+If no user is logged in, then the header should include links to:
+
+- the home page
+- the login page
+- the register page
+the link of the active page should use the **active** css class.
+
+#### Authenticated user
+If a user is logged in, then the header should include links to:
+
+- the home page
+- the new article page
+- the settings page
+- the profile page
+the link of the active page should use the **active** css class.
+
+### Pages
+#### Home
+The Home page includes up to three tabs:
+
+- a default Global Feed tab
+- an optional tag name tab, appears after clicking one of the popular tags
+- an optional Your Feed tab, appears after logging in
+
+
+# Development and Deployment
 
 The frontend part is based on the [frontend only application](https://github.com/rjaros/kvision-realworld-example-app), created with [KVision](https://kvision.io) and written in pure Kotlin/JS.
 
@@ -18,7 +57,7 @@ utilizing Spring Webflux and R2DBC fully asynchronous and non-blocking services 
 
 The project is using in-memory H2 database during development and PostgreSQL when deployed to Heroku.
 
-# Getting started
+## Getting started
 
 Make sure you have [JDK 8](https://openjdk.java.net/) or higher installed. Check other requirements of KVision [here](https://kvision.gitbook.io/kvision-guide/part-1-fundamentals/setting-up).
 
