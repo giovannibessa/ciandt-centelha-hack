@@ -1,17 +1,10 @@
 # ![RealWorld Example App](kvision-logo.png)
 
-[![RealWorld Frontend](https://img.shields.io/badge/realworld-fullstack-%23783578.svg)](http://realworld.io)
-![CI](https://github.com/rjaros/kvision-realworld-example-app-fullstack/workflows/CI/badge.svg)
-
-> ### [KVision](https://kvision.io) codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
-
-### [Demo](https://kvision-realworld-fullstack.herokuapp.com/)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
+### [KVision](https://kvision.io) codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
 This codebase was created to demonstrate a fully fledged fullstack application built with [KVision](https://kvision.io) including CRUD operations, authentication, routing, pagination, and more.
 
 We've gone to great lengths to adhere to the [KVision](https://kvision.io) community styleguides & best practices.
-
-For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
 
 # How it works
 
