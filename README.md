@@ -1,4 +1,5 @@
-# ![RealWorld Example App](kvision-logo.png)
+# <img width="391" alt="image" src="https://github.com/user-attachments/assets/0e28a94a-2f45-4237-97aa-fbda95d07504">
+
 
 # Overview
 [KVision](https://kvision.io) codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
@@ -75,7 +76,7 @@ The project is using in-memory H2 database during development and PostgreSQL whe
 
 ## Getting started
 
-Make sure you have [JDK 8](https://openjdk.java.net/) or higher installed. Check other requirements of KVision [here](https://kvision.gitbook.io/kvision-guide/part-1-fundamentals/setting-up).
+Make sure you have [JDK 8](https://openjdk.java.net/) or higher installed. Check other requirements of KVision [here](https://kvision.gitbook.io/kvision-guide/1.-getting-started-1/setting-up).
 
 The project is build with Gradle Wrapper. Run Gradle build with `./gradlew` or `gradlew.bat` command.
 
