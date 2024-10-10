@@ -34,7 +34,9 @@ data class ConduitState(
     val settingsErrors: List<String>? = null,
     val registerErrors: List<String>? = null,
     val registerUserName: String? = null,
-    val registerEmail: String? = null
+    val registerEmail: String? = null,
+    val mostLikedPostsLoading: Boolean = false,
+    val mostLikedPosts: List<String>? = null,
 ) {
     val pageSize = when (feedType) {
         FeedType.USER, FeedType.GLOBAL, FeedType.TAG -> 10
@@ -89,6 +91,9 @@ sealed class ConduitAction : RAction {
     data class RegisterError(val username: String?, val email: String?, val errors: List<String>) : ConduitAction()
 
     object Logout : ConduitAction()
+
+    object MostLikedPostsLoading : ConduitAction()
+    data class MostLikedPostsLoaded(val posts: List<String>) : ConduitAction()
 
     data class EditorPage(val article: Article?) : ConduitAction()
     data class EditorError(
@@ -198,5 +203,11 @@ fun conduitReducer(state: ConduitState, action: ConduitAction): ConduitState = w
             editorErrors = action.errors,
             editedArticle = action.article
         )
+    }
+     is ConduitAction.MostLikedPostsLoading -> {
+        state.copy(mostLikedPostsLoading = true)
+    }
+    is ConduitAction.MostLikedPostsLoaded -> {
+        state.copy(mostLikedPostsLoading = false, mostLikedPosts = action.posts)
     }
 }

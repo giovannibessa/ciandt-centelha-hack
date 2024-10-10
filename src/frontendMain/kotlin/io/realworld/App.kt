@@ -42,6 +42,9 @@ class App : Application() {
                         View.ARTICLE -> {
                             article(state)
                         }
+                        View.MOST_LIKED_POSTS -> {
+                            mostLikedPostPreview()
+                        }
                         View.PROFILE -> {
                             profilePage(state)
                         }

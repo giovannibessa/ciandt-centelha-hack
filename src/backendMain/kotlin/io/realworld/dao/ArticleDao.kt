@@ -197,6 +197,21 @@ class ArticleDao(val connectionFactory: ConnectionFactory, val databaseClient: D
         }
     }
 
+    suspend fun getMostLikedPosts(limit: Int = 20): List<String> {
+        return databaseClient.execute(
+            """SELECT u.username, a.title, a.likes 
+            FROM articles a 
+            INNER JOIN users u ON a.author_id = u.id 
+            ORDER BY a.likes DESC 
+            LIMIT $limit""".trimIndent()
+        ).fetch().flow().toList().map { 
+            val userName = it["username"] as String
+            val articleTitle = it["title"] as String
+            val likes = it["likes"] as Int
+            "$userName: '$articleTitle' ($likes likes)"
+        }
+    }
+
     private suspend fun updateTags(tagList: List<String>): List<Int> {
         return tagList.map { tag ->
             databaseClient.execute("SELECT id FROM tags WHERE name = :name").bind("name", tag)
