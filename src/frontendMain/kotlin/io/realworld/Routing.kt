@@ -5,6 +5,7 @@ import kotlin.js.RegExp
 
 enum class View(val url: String) {
     HOME("/"),
+    MOST_LIKED_POSTS("/most-liked-posts"),
     ARTICLE("/article"),
     PROFILE("/@"),
     LOGIN("/login"),
@@ -32,6 +33,8 @@ fun Navigo.initialize(): Navigo {
         ConduitManager.editorPage()
     }).on("${View.EDITOR.url}/:slug", { params ->
         ConduitManager.editorPage(stringParameter(params, "slug"))
+    }).on(View.MOST_LIKED_POSTS.url, { _ ->
+        ConduitManager.mostLikedPostsPage()
     })
 }
 

@@ -236,6 +236,10 @@ object ConduitManager : CoroutineScope by CoroutineScope(Dispatchers.Default + S
         }
     }
 
+    fun mostLikedPostsPage() {
+        conduitStore.dispatch(ConduitAction.MostLikedPostsLoading)
+    }
+
     fun editorPage(slug: String? = null) {
         if (slug == null) {
             conduitStore.dispatch(ConduitAction.EditorPage(null))

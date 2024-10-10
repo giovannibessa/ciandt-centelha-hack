@@ -2,6 +2,7 @@ package io.realworld
 
 import io.realworld.layout.articles.article
 import io.realworld.layout.homePage
+import io.realworld.layout.mostLikedPostPage
 import io.realworld.layout.profilePage
 import io.realworld.layout.shared.footer
 import io.realworld.layout.shared.headerNav
@@ -41,6 +42,9 @@ class App : Application() {
                         }
                         View.ARTICLE -> {
                             article(state)
+                        }
+                        View.MOST_LIKED_POSTS -> {
+                            mostLikedPostPage(state)
                         }
                         View.PROFILE -> {
                             profilePage(state)
