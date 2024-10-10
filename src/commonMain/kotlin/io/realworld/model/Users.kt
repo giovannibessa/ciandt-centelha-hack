@@ -1,13 +1,13 @@
 package io.realworld.model
 
 import kotlinx.serialization.Serializable
-import pl.treksoft.kvision.remote.Id
-import pl.treksoft.kvision.remote.PersistenceConstructor
-import pl.treksoft.kvision.remote.Table
-import pl.treksoft.kvision.remote.Transient
+import io.kvision.remote.Id
+import io.kvision.remote.PersistenceConstructor
+import io.kvision.remote.Table
+import io.kvision.remote.Transient
 
 @Serializable
-@Table("users")
+@Table("users", "users", "")
 data class User(
     @Id
     val id: Int? = null,
