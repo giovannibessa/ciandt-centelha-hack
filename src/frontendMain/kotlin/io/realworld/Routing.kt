@@ -5,7 +5,7 @@ import kotlin.js.RegExp
 
 enum class View(val url: String) {
     HOME("/"),
-    MOST_LIKED_POSTS("/mostLikedPosts"),
+    MOST_LIKED_POSTS("/most-liked-posts"),
     ARTICLE("/article"),
     PROFILE("/@"),
     LOGIN("/login"),

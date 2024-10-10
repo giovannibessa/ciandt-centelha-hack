@@ -197,7 +197,7 @@ class ArticleDao(val connectionFactory: ConnectionFactory, val databaseClient: D
         }
     }
 
-    suspend fun getMostLikedPosts(limit: Int = 20): List<String> {
+      suspend fun getMostLikedPosts(limit: Int = 20): List<String> {
         return databaseClient.execute(
             """SELECT u.username, a.title, a.likes 
             FROM articles a 

@@ -80,7 +80,7 @@ actual class ArticleService(
         }
     }
 
-    override suspend fun getMostLikedPosts(): List<String> {
+    suspend fun getMostLikedPosts(): List<String> {
         return articleDao.getMostLikedPosts()
     }
 

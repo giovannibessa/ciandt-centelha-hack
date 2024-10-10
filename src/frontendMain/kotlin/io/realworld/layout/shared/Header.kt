@@ -19,6 +19,9 @@ fun Container.headerNav(state: ConduitState) {
                     li(className = "nav-item") {
                         link("Home", "#${View.HOME.url}", className = state.homeLinkClassName)
                     }
+                    li(className = "nav-item") {
+                        link("Top Posts", "#${View.MOST_LIKED_POSTS.url}", className = state.homeLinkClassName)
+                    }
                     if (state.user == null) {
                         li(className = "nav-item") {
                             link("Sign in", "#${View.LOGIN.url}", className = state.loginLinkClassName)

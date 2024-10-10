@@ -237,8 +237,7 @@ object ConduitManager : CoroutineScope by CoroutineScope(Dispatchers.Default + S
     }
 
     fun mostLikedPostsPage() {
-        conduitStore.dispatch(ConduitAction.MostLikedPostsPage)
-        routing.navigate("/most-liked-posts")
+        conduitStore.dispatch(ConduitAction.MostLikedPostsLoading)
     }
 
     fun editorPage(slug: String? = null) {
